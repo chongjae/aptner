@@ -1,0 +1,30 @@
+{
+  "title": "아파트너",
+  "config": {
+    "error": {
+      "invalid_login": "로그인에 실패했습니다. 아이디 또는 비밀번호를 확인해주세요.",
+      "unknown": "Unexpected error"
+    },
+    "step": {
+      "user": {
+        "description": "아파트너 아이디/비밀번호",
+        "data": {
+          "username": "아이디",
+          "password": "비밀번호"
+        }
+      }
+    }
+  },
+  "services": {
+    "car_reservation": {
+      "name": "방문 차량 예약",
+      "description": "오늘 날짜로 차량 예약을 합니다.",
+      "fields": {
+        "car_no": {
+          "name": "차량 번호 입력",
+          "description": "오늘 방문할 차량 번호를 입력해주세요."
+        }
+      }
+    }
+  }
+}

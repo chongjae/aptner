@@ -1,0 +1,6 @@
+car_reservation:
+  fields:
+    car_no:
+      required: true
+      selector:
+        text:

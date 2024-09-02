@@ -1,0 +1,6 @@
+{
+    "name": "아파트너",
+    "country": "KR",
+    "domains": ["sensor"],
+    "render_readme": true
+  }

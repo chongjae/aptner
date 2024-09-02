@@ -1,0 +1,13 @@
+{
+  "domain": "aptner",
+  "name": "아파트너",
+  "codeowners": ["@chongjae"],
+  "config_flow": true,
+  "documentation": "https://github.com/chongjae/aptner",
+  "homekit": {},
+  "iot_class": "cloud_polling",
+  "ssdp": [],
+  "zeroconf": [],
+  "version": "0.1.0",
+  "issue_tracker": "https://github.com/chongjae/aptner/issues"
+}
