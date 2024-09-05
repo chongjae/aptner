@@ -1,3 +1,4 @@
+import asyncio
 from datetime import datetime, timedelta
 
 import json
@@ -69,12 +70,13 @@ class Aptner:
             now = datetime.now()
             for monthly_parking_history in monthly_access_history['monthlyParkingHistoryList']:
                 first_history = monthly_parking_history['visitCarUseHistoryReportList'][0]
-                in_datetime_str = first_history['inDatetime']
-                in_datetime = datetime.strptime(in_datetime_str, '%Y.%m.%d %H:%M')
-                time_diff = now - in_datetime
-                if time_diff <= timedelta(seconds=50):
+                out_datetime_str = first_history['outDatetime']
+                out_datetime = datetime.strptime(out_datetime_str, '%Y.%m.%d %H:%M')
+                time_diff = now - out_datetime
+                if time_diff > timedelta(minutes=1):
+                    return None
+                else:
                     return first_history['carNo']
-                return None
         except Exception as e:
             raise e
 
